@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>What's up World!</h1>
+    <h3>This is Simon asking!</h3>
+    <img src="../W3D3HtmlDom/resourse/kamchatka-tm.jpg" alt="This is your world if see it!" width="600" height="300">
+    <footer><p>This is your world if you see it!</p></footer>
+    <p>My Favorite Movies</p>
+    <ul>
+        <li>Titanic </li> <a href="https://www.imdb.com/video/vi907189785?ref_=nv_sr_srsg_1"> Titanic</a>
+        <li>Prison Break</li> <a href="https://www.imdb.com/title/tt0455275/?ref_=fn_al_tt_1"> Prison Break</a>
+        <li>The last O.G</li> <a href="https://www.imdb.com/title/tt5363912/?ref_=fn_al_tt_3">The last O.G</a>
+    </ul>
+    <p>
+        <a href="https://validator.w3.org/check/referer">Validate</a>
+    </p>
+    First Name<input type="text" id="fname"> <br>
+    Last Name<input type="text" id="lname"> <br>
+    <button onclick="fullName()">Click Here</button> 
+    <p>Here is full name: <span id="output"></span></p>
+
+   <script>
+       function fullName(){
+         const fname = document.getElementById("fname");  
+         const lname = document.getElementById("lname"); 
+         const output = document.getElementById("output").innerHTML=fname + lname;
+       }
+   </script> 
+</body>
+</html>
