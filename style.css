@@ -1,6 +1,6 @@
 body {
     background-color:rgb(167, 230, 230);
-    background-image: url("../../MSD301/W3D3HtmlDom/resourse/kamchatka-tm.jpg");
+    background-image: url("./resourse/kamchatka-tm.jpg");
     background-repeat: no-repeat;
     background-size:cover;
 }
