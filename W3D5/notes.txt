@@ -1,0 +1,15 @@
+Absolute path = c/desktop/css/img.jpg
+Relative path = ../../css/img.jpg
+N.B. It’s always good to use relative path, bcz when it goes to server, the structure of the file might change.
+
+Unobstrusive vs Obstrusive JS
+e.g <button onclick= "dosomething()">  ==> Obstrusive
+
+e.g const okButton = document.getElementById("id");  ==> Unobstrusive
+    okButton.onclick = okayClick;
+
+when we put JS Script tag at the bottom, the browser executes the JS file first before the html is executed.
+But still modern JS conventions recommend at the Top by using window.loading, async ...
+E.g <script src="..." type="text/js defer || async></script> 
+
+
