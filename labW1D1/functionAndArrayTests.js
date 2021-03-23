@@ -10,7 +10,7 @@ describe("maxOfThree", function () {
         assert.strictEqual(maxOfThree(3, 2, 1), 3);
     });
     it("tests -1 -2 -3", function () {
-        assert.strictEqual(maxOfThree(-1, -2, -3), 3);
+        assert.strictEqual(maxOfThree(-1, -2, -3), -1);
     });
 });
 
