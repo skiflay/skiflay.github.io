@@ -112,9 +112,12 @@ function addBook(book){
 function findTitles(){
 let title = [];
 for(let book of library){
-    title.push(book.title)
+    title.push(book.title)  
 }
-return title.sort()
+//return title.sort()
+title.sort(function(a,b) {
+    return (a > b) ? 1 : ((b > a) ? -1 : 0);
+});
 }
 console.log(findTitles(library))
 
