@@ -29,18 +29,24 @@ describe("library", function () {
     });
 
     it("find authors", function () {
-        assert.deepStrictEqual(findAuthors(), authors);
+        assert.deepEqual(findAuthors(), authors);
     });
 
     it("find ids", function () {
-        assert.deepStrictEqual(findIDs(), authors);
+        assert.deepEqual(findIDs(), ids);
     });
 
+    
     it("add book", function () {
         const newBook = {title: "My New Book", author: "Me Too", libraryID: 1144};
-        const newIDs = ids.push(1144);
-        assert.deepStrictEqual(addBook(newBook), newBook);
-        assert.deepStrictEqual(findIDs(), newIDs);
-    });
+        ids.push(1144);
+        ids.sort();
+        assert.deepEqual(addBook(newBook), newBook);
+        assert.deepEqual(findIDs(), ids);
+         });
+        
 
 });
+
+
+

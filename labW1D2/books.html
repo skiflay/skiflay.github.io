@@ -2,21 +2,34 @@
 <html>
 <head>
     <title>Book List</title>
-    <script src="books.js"></script>
+    <script src="app.js"></script>
 </head>
 
 <body>
     <p>
         Book Title
         <br />
-        <input type="text" id="title" size="80" />
+        <input type="text" id="title" size="80" /> 
+    </p>
+    <p>
+       Author
+        <br />
+        <input type="text" id="author" size="80" /> 
+    </p>
+    <p>
+        Library ID
+        <br />
+        <input type="text" id="id" size="80" /> 
     </p>
 
-    <input type="button" value="Show titles" id="titlesBtn" onclick="showTitles();"/>
+    <input type="button" value="Add Book To Library" id="addbookBtn" onclick="addBrowserBook();"/>
+    <input type="button" value="Show titles" id="titleBtn" onclick="showTitles();"/>
+    <input type="button" value="Show author" id="authorBtn" onclick="showAuthors();"/>
+    <input type="button" value="Show IDs" id="idBtn" onclick="showIDs();"/>
     <input type="button" value="Scramble" id="scrambleBtn" onclick="scramble();"/>
-
+    
     <p>
-        <textarea id="displayArea" rows="10" cols="80"></textarea>
+        <textarea id="displayArea" rows="15" cols="80"></textarea>
     </p>
 
 </body>
