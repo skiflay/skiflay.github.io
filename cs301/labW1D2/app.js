@@ -114,10 +114,7 @@ let title = [];
 for(let book of library){
     title.push(book.title)  
 }
-//return title.sort()
-title.sort(function(a,b) {
-    return (a > b) ? 1 : ((b > a) ? -1 : 0);
-});
+return title.sort((a,b)=>(a>b?1:-1))
 }
 console.log(findTitles(library))
 
