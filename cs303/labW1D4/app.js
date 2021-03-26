@@ -1,11 +1,11 @@
 "use strict";
 
-exports.ucFirst = ucFirst;
-exports.checkSpam = checkSpam;
-exports.truncate = truncate;
-exports.extractCurrencyValue= extractCurrencyValue;
-exports.getMaxSubSum= getMaxSubSum;
-exports.camelize= camelize;
+// exports.ucFirst = ucFirst;
+// exports.checkSpam = checkSpam;
+// exports.truncate = truncate;
+// exports.extractCurrencyValue= extractCurrencyValue;
+// exports.getMaxSubSum= getMaxSubSum;
+// exports.camelize= camelize;
 /**
  * 
  * @param {string} str 
