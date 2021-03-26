@@ -1,7 +1,7 @@
 "use strict"
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = { filterRangeInPlace, filterRange, Calculator, groupById, unique, }; //add all of your function names here that you need for the node mocha tests
+// module.exports = { filterRangeInPlace, filterRange, Calculator, groupById, unique, }; //add all of your function names here that you need for the node mocha tests
 
 //higher or equal to a and lower or equal to b
 let arr = [5, 3, 8, 1];
