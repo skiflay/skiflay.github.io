@@ -4,8 +4,10 @@
 const assert = require("assert");  //always need this with node
 const myExports = require("./app.js");  //with node need the name of your file with your functions here
 const getMaxSubSum = myExports.getMaxSubSum;  //do this for all of the functions used in the Mocha tests
-const ucFirst = myExports.ucFirst; 
+const ucFirst = myExports.ucFirst;
+const checkSpam = myExports.checkSpam; 
 const truncate = myExports.truncate; 
+const extractCurrencyValue = myExports.extractCurrencyValue;
 const camelize = myExports.camelize; 
 
 
@@ -22,29 +24,29 @@ describe("ucFirst", function() {
 
 describe("checkSpam", function() {
   it('finds spam in "buy ViAgRA now"', function() {
-    assert.isTrue(checkSpam('buy ViAgRA now'));
+    assert.strictEqual(checkSpam('buy ViAgRA now'),true);
   });
 
   it('finds spam in "free xxxxx"', function() {
-    assert.isTrue(checkSpam('free xxxxx'));
+    assert.strictEqual(checkSpam('free xxxxx'),true);
   });
 
   it('no spam in "innocent rabbit"', function() {
-    assert.isFalse(checkSpam('innocent rabbit'));
+    assert.strictEqual(checkSpam('innocent rabbit'),false);
   });
 });
 
 /* eslint-enable quotes */
 describe("truncate", function() {
   it("truncate the long string to the given length (including the ellipsis)", function() {
-    assert.equal(
+    assert.strictEqual(
       truncate("What I'd like to tell on this topic is:", 20),
       "What I'd like to te…"
     );
   });
 
   it("doesn't change short strings", function() {
-    assert.equal(
+    assert.strictEqual(
       truncate("Hi everyone!", 20),
       "Hi everyone!"
     );
@@ -57,9 +59,8 @@ describe("extractCurrencyValue", function() {
   it("for the string $120 returns the number 120", function() {
     assert.strictEqual(extractCurrencyValue('$120'), 120);
   });
-
-
 });
+
 describe("getMaxSubSum", function() {
     it("maximal subsum of [1, 2, 3] equals 6", function() {
       assert.equal(getMaxSubSum([1, 2, 3]), 6);
