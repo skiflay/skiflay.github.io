@@ -16,7 +16,7 @@ describe("numbers using recursion",function(){
     })
     
     it("fibonacci of a number",function (){
-    assert.equal(fibonacci(8),21)
+    assert.equal(fibonacchi(8),21)
     })
     
     })
