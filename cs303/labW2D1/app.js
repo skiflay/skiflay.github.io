@@ -1,5 +1,5 @@
 "use strict"
-//module.exports = { sum,factorial,fibonacchi };
+// module.exports = { sum,factorial,fibonacchi };
 /**
  * 
  * @param {number} num

@@ -1,9 +1,9 @@
-//"use strict"
+// "use strict"
 // const assert = require("assert"); //always need this with node
 // const myExports = require("./myRecursion.js");
 // const sum = myExports.sum;
 // const factorial = myExports.factorial;
-// const fibonacci = myExports.fibonacci;
+// const fibonacchi = myExports.fibonacchi;
  
  
 describe("numbers using recursion",function(){
