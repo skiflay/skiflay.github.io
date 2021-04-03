@@ -1,10 +1,10 @@
 "use strict";
-exports.filter1To7= filter1To7;
-exports.filter3to6= filter3to6;
-// exports.inBetween = inBetween;
-exports.nameSortedAnswer = nameSortedAnswer;
-exports.ageSortedAnswer =ageSortedAnswer;
-exports.surnameSortedAnswer = surnameSortedAnswer;
+// exports.filter1To7= filter1To7;
+// exports.filter3to6= filter3to6;
+// // exports.inBetween = inBetween;
+// exports.nameSortedAnswer = nameSortedAnswer;
+// exports.ageSortedAnswer =ageSortedAnswer;
+// exports.surnameSortedAnswer = surnameSortedAnswer;
 
 
 let arr = [1, 2, 3, 4, 5, 6, 7];
