@@ -1,112 +1,80 @@
-"use strict"
-// module.exports = { sum,factorial,fibonacchi };
+"use strict";
+
+
+/* eslint-disable */
+/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
+//module.exports = { sumTo, factorial, fib, printList,  printReverseList}; //add all of your function names here that you need for the node mocha tests
+
 /**
  * 
- * @param {number} num
- * @returns{numner}number; 
+ * @param {number} n 
+ * @returns {number} sum of n number
  */
-function sum(num){
-if(num===1){
-return num;
- }
-else{
-return num+sum(num-1)
- }
- }
-/**
- * 
- * @param {number} num
- * @returns {number};
- */
-function factorial(num){
-if(num===1){
-return num;
- }
-else{
-return num * factorial(num-1);
- }
-}
-//console.log(factorial(5));
-/**
- * 
- * @param {number} num
- * @returns {number}number;
- */
-function fibonacchi(num){
-if(num<=1){
-return num;
- }
-else {
-return fibonacchi(num-1) + fibonacchi(num-2);
- }
+function sumTo(n) {
+  if (n == 1) return 1;
+  return n + sumTo(n - 1);
 }
 
 /**
  * 
- * @returns {obj}
+ * @param {number} n 
+ * @returns {number} factorial of n number
  */
-function getListToPrint() {
-    return {
-    value: 1, next:
-    {
-    value: 2, next:
-    {
-    value: 3, next:
-    { value: 4, next: null }
-    }
-    }
-    };
-   }
-    
-   function printListbyRecursion(start) {
-    
-    console.log(start.value);
-    
-    let next = start.next;
-    
-    if (next !== null) printListbyRecursion(next);
-    
-   }
-    
-   function callprintListbyRecursion() { printListbyRecursion(getListToPrint()); }
-    
-   function printListbyIteration(start) {
-    
-    let retrn = [];
-    
-    while (start !== null) {
-    retrn.push(start.value);
-    start = start.next;
-    }
-    
-    retrn.forEach(n => log(n));
-   }
-    
-   function callprintListbyIteration() { printListbyIteration(getListToPrint()); }
+function factorial(n) {
+  return n ? n * factorial(n - 1) : 1;
+}
 
-   function reverseLinkedList(list) {
- 
-    if (list.next !== null) reverseLinkedList(list.next);
-    console.log(list.value);
-    
-   }
-    
-   function callreverseLinkedList() { reverseLinkedList(getListToPrint()); }
-    
-   function reverseLinkedListIteration(list) {
-    
-    let li = [];
-    
-    while (true) {
-    li.push(list.value);
-    if (list.next === null) break;
-    list = list.next;
-    }
-    
-    for (let i = li.length - 1; i >= 0; i -= 1) log(li[i]);
-    
-   }
-    
-   function callreverseLinkedListIteration() { 
-    reverseLinkedListIteration(getListToPrint()); 
-   }
+/**
+ * 
+ * @param {number} n 
+ * @returns {number} calculates sume of numbers
+ */
+function sumTo(n) {
+  if (n == 1) return 1;
+  return n + sumTo(n - 1);
+}
+
+/**
+ * 
+ * @param {number} n 
+ * @returns {number} calcultes the factorial of a number
+ */
+function factorial(n) {
+  return n ? n * factorial(n - 1) : 1;
+}
+
+/**
+ * 
+ * @param {number} n 
+ * @returns {number} returns fibonachi numbers of n
+ */
+function fib(n) {
+  return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+}
+
+/**
+ * 
+ * @param {list} list 
+ * @returns {list} prints list one by one
+ */
+function printList(list) {
+  let result;
+  if (list.next) {
+    printList(list.next);
+  }
+
+}
+
+/**
+ * 
+ * @param {list} list 
+ * @returns {list} prints reversed list 
+ */
+
+function printReverseList(list) {
+
+  if (list.next) {
+    printReverseList(list.next);
+  }
+
+}
