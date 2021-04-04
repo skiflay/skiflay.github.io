@@ -3,7 +3,7 @@
 Comment these out when you send it to the browser with the index.html mocha setup page. */
 
 // const assert = require("assert");  //always need this with node
-// const myExports = require("./closure.js");  //with node need the name of your file with your functions here
+ //const myExports = require("./app.js");  //with node need the name of your file with your functions here
 // const inArray = myExports.inArray;  //do this for all of the functions used in the Mocha tests
 // const inBetween = myExports.inBetween; 
 // const byField = myExports.byField; 
