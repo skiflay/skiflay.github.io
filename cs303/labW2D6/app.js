@@ -59,5 +59,5 @@ function makeBank(){
      }
 }
 const checkBal= makeBank();
-console.log(checkBal())
+console.log("expect 85", checkBal())
 console.log(checkBal())
