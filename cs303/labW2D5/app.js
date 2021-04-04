@@ -1,74 +1,69 @@
-"use strict";
-// exports.filter1To7= filter1To7;
-// exports.filter3to6= filter3to6;
-// // exports.inBetween = inBetween;
-// exports.nameSortedAnswer = nameSortedAnswer;
-// exports.ageSortedAnswer =ageSortedAnswer;
-// exports.surnameSortedAnswer = surnameSortedAnswer;
+"use strict"
+/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
+*/
+//module.exports = {inArray, inBetween, byField, makeArmy }; //add all of your function names here that you need for the node mocha tests
 
-
-let arr = [1, 2, 3, 4, 5, 6, 7];
-/**
- * 
- * @param {number} number 
- * @returns {boolean} returns true if num is in the arr, else false
- */
-function filter1To7(n){
-let filter = filtered(n)
-    return filter;  
-}
-let filtered = n=>{
-    if(arr.includes(n)){
-        return true; 
-    }
-     return false;
-} 
-console.log("expect true", filter1To7(5) )
 
 /**
  * 
- * @param {number} a 
- * @param {number} b 
- * @returns {boolean} true if num is b/n a & b, else false
+ * @param {Array} arr holding values
+ * @returns {Function} returns a function that tests whether its argument is in the arr
+ * 
  */
- const arr2 = [0, 4, 5, 10, 6, 100];
-function filter3to6(a,b) {
-    let inNum = filtered(a)
-    return inNum;  
-  }
+function inArray(arr) {
+ 
+        return function(x) {
+          return arr.includes(x);
+        };
 
-//   function filter3to6(a,b){
-//     return arr2.filter(inBetween(a,b))
-// }
-function inBetween(a, b) {
+      }
+      
+
+
+/**
+ * 
+ * @param {number} low is bottom of range
+ * @param {number}  high is top of range
+ * @returns {Function} returns a function that tests whether its argument is inside the range
+ * 
+ */
+function inBetween(low, high) {
     return function(x) {
-      return x > a && x < b;
+        return x >= low && x <= high;
+      };
+
+}
+
+/**
+ * 
+ * @param {String} fieldName is a property on object to be sorted
+ * @returns {Function} sorting function
+ */
+function byField(fieldName){
+
+    return (a, b) => a[fieldName] > b[fieldName] ? 1 : -1;
+}
+
+
+/**
+ * @returns {Function} closure that returns it's number
+ */
+ function makeArmy() {
+
+  let shooters = [];
+
+  for(let i = 0; i < 10; i++) {
+    let shooter = function() { // shooter function
+      console.log("I am shooter: " + i );
+      return i; // should show its number
     };
+    shooters.push(shooter);
   }
-//   function filter3to6(a,b){
-//     return arr2.filter(inBetween(a,b))
-// }
+
+  return shooters;
+}
+
+//let army = makeArmy();
   
-console.log("expect [4,5]", filter3to6(5))
-console.log(filter3to6(3,6))
-
-let users = [
-    { name: "John", age: 20, surname: "Johnson" },
-    { name: "Pete", age: 18, surname: "Peterson" },
-    { name: "Ann", age: 19, surname: "Hathaway" },
-  ];
-  function nameSortedAnswer(){
-      return users.sort((a, b) => a.name > b.name ? 1 : -1)
-  }
-  console.log(nameSortedAnswer(users))
-
-  function ageSortedAnswer(){
-    return users.sort((a, b) => a.age > b.age ? 1 : -1) 
-  }
-  console.log(ageSortedAnswer(users))
-
-  function surnameSortedAnswer(){
-    return users.sort((a, b) => a.surname > b.surname ? 1 : -1) 
-  }
-  console.log(surnameSortedAnswer(users))
-    
+  //army[0](); // the shooter number 0 shows 10
+  //army[5](); // and number 5 also outputs 10...
