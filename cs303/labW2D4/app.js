@@ -1,8 +1,8 @@
 "use strict";
 
-exports.treeNode2 =treeNode2;
-exports.contains = contains;
-exports.subtree = subtree;
+// exports.treeNode2 =treeNode2;
+// exports.contains = contains;
+// exports.subtree = subtree;
 /**
  * 
  * @param {value}
