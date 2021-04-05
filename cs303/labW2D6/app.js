@@ -46,18 +46,16 @@ function makeBank(){
         { customerId: 1, customerTransactions: [10, 50, -40] },
         { customerId: 2, customerTransactions: [10, 10, -10] },
         { customerId: 3, customerTransactions: [5, -5, 55] }];
-     return function(){
         return bank.getBalance = function(){
-            const totalBal = 0
+            let totalBal = 0
             for(let trans of bank.transactionsDB){
-                for(let bal of trans){
-                    totalBal += bal.customerTransactions;
+                for(let bal of trans.customerTransactions){
+                    totalBal += bal;
                 }
             }
             return totalBal;
-        }
-     }
+        }    
 }
 const checkBal= makeBank();
 console.log("expect 85", checkBal())
-console.log(checkBal())
+
