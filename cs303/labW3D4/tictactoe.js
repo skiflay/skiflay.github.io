@@ -10,7 +10,7 @@ const points2 = 0;    // player 2 points
 const size = 3;
 
 function drawBoard() {
-   let Parent = document.getElementById("game");
+    let Parent = document.getElementById("game");
     let counter = 1;
     
     while (Parent.hasChildNodes()) {
