@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="tictactoe.css">
-    </head>
-    <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./ticTacToe.css">
+</head>
+<body>
+  <!-- contenteditable="true"-->  
+  <div class="game"> 
+    <div class="game-title">Tic Tac Toe<span id="gameSettings" class="clickable gameSttings">Game Settings</span></div>
+      <div id="changeSettings" style="display:none">
+        <div class="setting"><label for="p1name">Player 1 Name:</label>
+        <input type="text" id="p1name" placeholder="Player 1"></div>
+        <div class="setting"><label for="p2name">Player 2 Name:</label>
+        <input type="text" id="p2name" placeholder="Player 2"></div>
+        <div class="setting"><label for="gameSize">Game Size:</label>
+        <input type="text" id="gameSize" placeholder="3" title="Game Board Size Width & Height. 3 or 3,4"></div>
+        <div class="setting"><label for="winBy">Win with n in a Row:</label>
+        <input type="text" id="winBy" placeholder="3"></div>
+        <div class="setting"><input type="button" id="updateSettings" value="Update Setting"></div>
+      </div>
+      <div id="currentSettings" class="setting">0</div>
 
-        <li><a href="../index.html">back to Home Page</a></li>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div class="game">
-            <div class="game-title" contenteditable="true">Tic Tac Toe</div>
-            <div class="player" contenteditable="true">
-            Player 1
-            <div style="font-size:30pt;" id="player1" class="selected" contenteditable="true">
-            0
-            </div>
-            </div>
-            
-            <table id="game" class="tictactoe" style="float:left;width:45%;" contenteditable="true">
-            </table>
-            
-            <div class="player" contenteditable="true">
-            Player 2
-            <div id="player2" style="font-size:30pt;" contenteditable="true">0</div>
-            </div>
-            
-            <div class="clear" contenteditable="true"></div>
-            </div>
-        <script src="tictactoe.js" async defer></script>
-    </body>
-</html>
 
+
+
+    <div><span id="gameEnd" class="gameEnd clickable">Player X Wins</span></div>
+    <div id="player1name" class="player">
+    Player 1
+    <div style="font-size:30pt;" id="player1" class="selected">
+    0
+    </div>
+    </div>
+    
+    <table id="game" class="tictactoe" style="float:left;width:45%;">
+    </table>
+    
+    <div id="player2name" class="player">
+    Player 2
+    <div id="player2" style="font-size:30pt;">0</div>
+  </div>  
+    
+    <div class="clear" contenteditable="true"></div>
+    <div id="timer" style="display:none">win</div>
+
+
+<script src="./tictactoe.js"></script>
+</body>
 </html>
